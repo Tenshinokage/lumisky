@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LumiSky™ — Projecteur Ciel Étoilé 2 en 1</title>
+  <meta name="description" content="LumiSky™ apporte la galaxie dans votre chambre, votre voiture et vos coins cosy. Projecteur étoilé 2 en 1 avec 10 scènes HD interchangeables." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ANNONCE TOP -->
+  <div class="top-banner">
+    🚚 Livraison gratuite sur toutes les commandes — Expédition en 1 à 3 jours ouvrables
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-logo">LUMISKY</div>
+    <div class="nav-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#produit">Boutique</a>
+      <a href="#avis">Avis</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="nav-cart-btn" id="nav-cart-btn">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Panier
+        <span id="cart-count" style="background:#fff;color:#6c63ff;border-radius:50%;width:18px;height:18px;font-size:11px;font-weight:700;display:none;align-items:center;justify-content:center;">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PANIER LATÉRAL -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h3>Votre panier</h3>
+      <button class="cart-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty">Votre panier est vide.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-price">0,00 $</span>
+      </div>
+      <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:14px;">Taxes et livraison calculées à la caisse</p>
+      <button class="cart-checkout">Procéder au paiement →</button>
+    </div>
+  </div>
+
+  <!-- ===== PAGE D'ACCUEIL ===== -->
+  <section id="accueil" style="padding:80px 40px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);">
+    <div style="max-width:700px;margin:0 auto;">
+      <p class="section-eyebrow">La petite lumière USB qui change tout</p>
+      <h1 style="font-size:48px;font-weight:700;letter-spacing:-1px;line-height:1.15;margin-bottom:20px;">
+        LumiSky™ — La lumière qui transforme chaque nuit en moment galactique.
+      </h1>
+      <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-bottom:36px;line-height:1.7;">
+        Branchez LumiSky™ sur n'importe quel port USB et créez une atmosphère étoilée douce en quelques secondes. Dans votre voiture, votre chambre ou votre coin cosy préféré.
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="#produit" style="background:#6c63ff;color:#fff;border-radius:10px;padding:15px 32px;font-size:15px;font-weight:700;transition:background 0.2s;">
+          Découvrir LumiSky™ →
+        </a>
+        <a href="#avis" style="border:1px solid rgba(255,255,255,0.2);color:#fff;border-radius:10px;padding:15px 32px;font-size:15px;transition:border-color 0.2s;">
+          Voir les avis clients
+        </a>
+      </div>
+    </div>
+
+    <!-- Points forts homepage -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:64px;text-align:left;">
+      <div style="border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;background:#12122a;">
+        <div style="font-size:28px;margin-bottom:10px;">🚗</div>
+        <div style="font-weight:600;margin-bottom:6px;">Voiture, chambre ou coin cosy</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.6;">Branchez LumiSky™ sur n'importe quel port USB et créez une ambiance étoilée douce en secondes.</div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;background:#12122a;">
+        <div style="font-size:28px;margin-bottom:10px;">🌙</div>
+        <div style="font-weight:600;margin-bottom:6px;">Lumière douce, pas agressive</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.6;">Le mode veilleuse doux aide à rendre l'heure du coucher, les trajets calmes et les soirées cinéma plus sereins.</div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;background:#12122a;">
+        <div style="font-size:28px;margin-bottom:10px;">🔄</div>
+        <div style="font-weight:600;margin-bottom:6px;">Pliez, visez et éclairez</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.6;">Le col USB flexible vous permet de diriger la projection vers le plafond, le mur ou l'intérieur de votre voiture.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAGE PRODUIT ===== -->
+  <section id="produit" class="hero">
+    <div class="hero-media">
+      <img
+        src="https://lumisky.shop/cdn/shop/files/LumiSky_no_shoptrendlife.png?v=1777854320&width=900"
+        alt="Projecteur LumiSky™ — Ciel étoilé 2 en 1"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="hero-info">
+      <div class="badge-row">
+        <span class="badge accent">★ 4,8 — 2 000+ avis vérifiés</span>
+        <span class="badge">2 en 1</span>
+        <span class="badge">Livraison gratuite</span>
+      </div>
+
+      <h2 class="product-title">LumiSky™ Projecteur<br>Ciel Étoilé 2 en 1</h2>
+
+      <div class="stars-row">
+        <span class="stars">★★★★★</span>
+        <span class="stars-count">(2 126+ avis)</span>
+      </div>
+
+      <div class="price-row">
+        <span class="price-main" id="price-display">64,95 $</span>
+        <span class="price-old">89,95 $</span>
+        <span class="price-save">Économisez 28%</span>
+      </div>
+
+      <div>
+        <div class="variant-label" style="margin-bottom:10px;">Choisissez votre version :</div>
+        <div class="variant-cards">
+          <button class="variant-card" data-variant="starter">
+            <div class="v-name">Starter</div>
+            <div class="v-price">1 disque HD — 27,95 $</div>
+          </button>
+          <button class="variant-card selected" data-variant="premium">
+            <div class="v-name">Premium ⭐</div>
+            <div class="v-price">10 disques HD — 64,95 $</div>
+          </button>
+        </div>
+      </div>
+
+      <button class="cta-btn" id="cta-btn">
+        Ajouter au panier — 64,95 $
+      </button>
+
+      <div class="shipping-note">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+        Commandez maintenant et recevez dans 4 à 8 jours
+      </div>
+
+      <!-- Modes de paiement -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+        <span style="font-size:12px;color:rgba(255,255,255,0.4);">Paiement sécurisé :</span>
+        <span class="payment-icon">VISA</span>
+        <span class="payment-icon">MC</span>
+        <span class="payment-icon">PayPal</span>
+        <span class="payment-icon">Apple Pay</span>
+        <span class="payment-icon">G Pay</span>
+      </div>
+
+      <!-- Mini avis -->
+      <div class="mini-reviews">
+        <div class="mini-review">
+          <div class="reviewer"><span class="stars">★★★★★</span> Jessica M. — Toronto</div>
+          <div class="text">«&nbsp;Je ne m'attendais pas à grand-chose à ce prix, mais wow… ça a complètement changé l'ambiance de ma chambre. Super relaxant la nuit.&nbsp;»</div>
+        </div>
+        <div class="mini-review">
+          <div class="reviewer"><span class="stars">★★★★★</span> Chloé M. — Los Angeles</div>
+          <div class="text">«&nbsp;Je l'ai mis dans ma voiture et ça a tout changé. Les gens pensent que c'était d'origine&nbsp;😂&nbsp;»</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI L'ADORER -->
+  <section class="section" id="pourquoi">
+    <p class="section-eyebrow">Caractéristiques</p>
+    <h2 class="section-title">Pourquoi vous allez l'adorer</h2>
+    <p class="section-subtitle">
+      Le projecteur 2 en 1 qui transforme votre chambre chaque nuit. Que vous ayez du mal à vous endormir, souhaitiez créer une ambiance apaisante pour vos enfants, ou que vous aimiez les beaux espaces — ce projecteur galaxie crée une magie instantanée en un seul toucher.
+    </p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔭</div>
+        <div class="feature-title">Lentille en verre HD</div>
+        <div class="feature-desc">Disque en verre haute clarté pour des étoiles nettes et définies couvrant tout votre plafond. Pas de lentille plastique bon marché.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👆</div>
+        <div class="feature-title">Contrôle intelligent</div>
+        <div class="feature-desc">Un clic : veilleuse. Deux clics : mode galaxie. Appui long : atténuer. Sans application ni télécommande nécessaire.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌌</div>
+        <div class="feature-title">10 scènes interchangeables</div>
+        <div class="feature-desc">Voie lactée, Saturne, Baleine Kun et plus encore. Changez de disque en quelques secondes.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-title">Col flexible 360°</div>
+        <div class="feature-desc">Orientez la lumière à n'importe quel angle. Fixez-le et profitez de l'effet parfait.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔇</div>
+        <div class="feature-title">Totalement silencieux</div>
+        <div class="feature-desc">Zéro bruit, zéro ventilateur. Sécuritaire et conçu pour une utilisation toute la nuit.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 SCÈNES -->
+  <section class="section" id="scenes">
+    <p class="section-eyebrow">Contenu inclus</p>
+    <h2 class="section-title">10 univers. Un seul projecteur.</h2>
+    <p class="section-subtitle">
+      Chaque coffret Premium est livré avec 10 disques de projection HD soigneusement sélectionnés. Glissez-en un — votre pièce devient quelque chose d'entièrement différent.
+    </p>
+    <div class="scenes-grid">
+      <div class="scene-item">
+        <span class="scene-emoji">🌌</span>
+        <span class="scene-name">Voie lactée</span>
+      </div>
+      <div class="scene-item">
+        <span class="scene-emoji">⛈️</span>
+        <span class="scene-name">Orage</span>
+      </div>
+      <div class="scene-item">
+        <span class="scene-emoji">🌕</span>
+        <span class="scene-name">Ciel lunaire</span>
+      </div>
+      <div class="scene-item">
+        <span class="scene-emoji">🪽</span>
+        <span class="scene-name">Ailes d'ange</span>
+      </div>
+      <div class="scene-item">
+        <span class="scene-emoji">🪐</span>
+        <span class="scene-name">Saturne</span>
+      </div>
+      <div class="scene-item">
+        <span class="scene-emoji">🐋</span>
+        <span class="scene-name">Baleine Kun</span>
+      </div>
+      <div class="scene-item">
+        <span class="scene-emoji">🌲</span>
+        <span class="scene-name">Forêt galactique</span>
+      </div>
+      <div class="scene-item">
+        <span class="scene-emoji">☄️</span>
+        <span class="scene-name">Lune météore</span>
+      </div>
+      <div class="scene-item">
+        <span class="scene-emoji">🦌</span>
+        <span class="scene-name">Cerf cosmique</span>
+      </div>
+      <div class="scene-item">
+        <span class="scene-emoji">✨</span>
+        <span class="scene-name">12 Constellations</span>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;font-size:13px;color:rgba(255,255,255,0.55);">
+      <span>✓ Les 10 disques inclus dans le Premium</span>
+      <span>⇄ Changement en quelques secondes</span>
+      <span>◌ Qualité lentille verre HD</span>
+      <span>🎁 Parfait en cadeau</span>
+    </div>
+  </section>
+
+  <!-- PARFAIT POUR -->
+  <section class="section">
+    <p class="section-eyebrow">Cas d'usage</p>
+    <h2 class="section-title">Parfait pour...</h2>
+    <div class="perfect-grid">
+      <div class="perfect-card">
+        <div class="perfect-icon">😴</div>
+        <div class="perfect-body">
+          <div class="perfect-title">S'endormir</div>
+          <div class="perfect-desc">Après les écrans, quand votre chambre doit être plus douce et calme pour s'endormir.</div>
+        </div>
+      </div>
+      <div class="perfect-card">
+        <div class="perfect-icon">👶</div>
+        <div class="perfect-body">
+          <div class="perfect-title">Les enfants la nuit</div>
+          <div class="perfect-desc">Pour les enfants qui n'aiment pas le noir total mais ont besoin d'un coucher en douceur.</div>
+        </div>
+      </div>
+      <div class="perfect-card">
+        <div class="perfect-icon">✨</div>
+        <div class="perfect-body">
+          <div class="perfect-title">Ambiance et déco</div>
+          <div class="perfect-desc">Chambres et coins qui ont besoin de chaleur, d'atmosphère et de caractère visuel.</div>
+        </div>
+      </div>
+      <div class="perfect-card">
+        <div class="perfect-icon">🎁</div>
+        <div class="perfect-body">
+          <div class="perfect-title">Cadeaux mémorables</div>
+          <div class="perfect-desc">Pour ceux qui veulent offrir quelque chose de plus surprenant qu'une simple lampe.</div>
+        </div>
+      </div>
+      <div class="perfect-card">
+        <div class="perfect-icon">🚗</div>
+        <div class="perfect-body">
+          <div class="perfect-title">Voiture et soirées</div>
+          <div class="perfect-desc">Transformez votre voiture ou n'importe quelle pièce en une expérience inoubliable.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENU DE LA BOÎTE -->
+  <div class="box-section">
+    <p class="section-eyebrow" style="color:rgba(139,133,255,0.8);">Ce qui est inclus</p>
+    <h2 class="section-title">Contenu de la boîte</h2>
+    <div class="box-list">
+      <div class="box-item">
+        <span class="box-check">✓</span> 1x Projecteur nuit galaxie
+      </div>
+      <div class="box-item">
+        <span class="box-check">✓</span> 1x Câble d'alimentation USB
+      </div>
+      <div class="box-item">
+        <span class="box-check">✓</span> <strong>Starter&nbsp;:</strong>&nbsp;1x disque de projection HD
+      </div>
+      <div class="box-item">
+        <span class="box-check">✓</span> <strong>Premium&nbsp;:</strong>&nbsp;10x disques de projection HD
+      </div>
+      <div class="box-item">
+        <span class="box-check">✓</span> 1x Bague de mise au point (réglable)
+      </div>
+      <div class="box-item">
+        <span class="box-check">✓</span> 1x Guide d'utilisation
+      </div>
+      <div class="box-item">
+        <span class="box-check">✓</span> Emballage cadeau prêt à offrir
+      </div>
+      <div class="box-item">
+        <span class="box-check">✓</span> E-book offert (formule 2e et 3e)
+      </div>
+    </div>
+  </div>
+
+  <!-- STATISTIQUES & AVIS -->
+  <section class="section" id="avis">
+    <p class="section-eyebrow">Communauté</p>
+    <h2 class="section-title">4 300+ personnes dorment sous les étoiles ce soir</h2>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-num">4,8</div>
+        <div class="stat-label">Note moyenne</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4 300+</div>
+        <div class="stat-label">Clients satisfaits</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">2 000+</div>
+        <div class="stat-label">Avis vérifiés</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">97%</div>
+        <div class="stat-label">Le rachèteraient</div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">SM</div>
+          <div class="review-meta">
+            <div class="reviewer-name">Sofia M.</div>
+            <div class="verified">✓ Acheteur vérifié</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«&nbsp;La projection est bien meilleure que ce que j'espérais. Ça a complètement changé l'ambiance de ma chambre la nuit.&nbsp;»</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">JT</div>
+          <div class="review-meta">
+            <div class="reviewer-name">Jordan T.</div>
+            <div class="verified">✓ Acheteur vérifié</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«&nbsp;Acheté en cadeau et la réaction a été immédiate — encore utilisé chaque soir sans exception.&nbsp;»</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">LK</div>
+          <div class="review-meta">
+            <div class="reviewer-name">Lena K.</div>
+            <div class="verified">✓ Acheteur vérifié</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«&nbsp;Très facile à utiliser, totalement silencieux, et le mode veilleuse chaud est vraiment pratique pour lire.&nbsp;»</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">DS</div>
+          <div class="review-meta">
+            <div class="reviewer-name">Daniel S.</div>
+            <div class="verified">✓ Acheteur vérifié</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«&nbsp;Ma chambre était tellement ennuyeuse avant… maintenant j'adore y être la nuit. L'ambiance est incroyable.&nbsp;»</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">CM</div>
+          <div class="review-meta">
+            <div class="reviewer-name">Chloé M.</div>
+            <div class="verified">✓ Acheteur vérifié</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«&nbsp;Je l'ai mis dans ma voiture et ça a tout changé. Les gens pensent que c'était d'origine&nbsp;😂&nbsp;»</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">JM</div>
+          <div class="review-meta">
+            <div class="reviewer-name">Jessica M.</div>
+            <div class="verified">✓ Acheteur vérifié</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«&nbsp;Je ne m'attendais pas à grand-chose à ce prix, mais wow… ça a complètement changé l'ambiance de ma chambre.&nbsp;»</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <p class="section-eyebrow">Questions fréquentes</p>
+    <h2 class="section-title">Foire aux questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">
+          Quelle est la différence entre Starter et Premium&nbsp;?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Le Starter inclut 1 disque de projection HD. Le Premium inclut les 10 disques HD. Le projecteur lui-même est identique — la seule différence est le nombre de scènes que vous pouvez profiter.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          La projection ressemble-t-elle aux photos&nbsp;?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Oui. La lentille en verre HD offre un effet de plafond clair et atmosphérique. Les résultats varient légèrement selon la hauteur de la pièce et la couleur du plafond — les plafonds clairs donnent les meilleurs résultats.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Puis-je le laisser allumé toute la nuit&nbsp;?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Oui. Il est conçu pour une utilisation silencieuse toute la nuit et fonctionne entièrement sans bruit via une alimentation USB. Sans ventilateur, sans accumulation de chaleur, zéro bruit.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Quelle source d'alimentation utilise-t-il&nbsp;?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          N'importe quelle source USB-A standard — un adaptateur mural, un ordinateur portable, une multiprise ou une batterie externe. Vous avez presque certainement déjà ce qu'il vous faut à la maison.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Est-ce un bon cadeau&nbsp;?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Absolument — surtout le coffret Premium, qui offre l'expérience complète des 10 scènes et arrive dans un emballage prêt à offrir. Il crée une réaction immédiate et est utilisé chaque soir.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Quelle est votre politique de retour&nbsp;?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Essayez sans risque pendant 30 jours. Si vous n'êtes pas entièrement satisfait, retournez-le pour un remboursement complet — sans question posée. Veuillez prévoir 1 à 3 jours ouvrables pour le traitement de votre commande avant l'expédition.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <p class="section-eyebrow" style="justify-content:center;display:flex;">Un seul projecteur. Chaque nuit.</p>
+    <h2>Choisissez la version qui vous convient</h2>
+    <p>Commencez simplement avec le Starter, ou vivez l'expérience complète des 10 scènes avec le Premium.</p>
+    <div class="final-btns">
+      <button class="btn-primary add-to-cart" onclick="document.querySelector('[data-variant=premium]').click(); document.getElementById('cta-btn').click();">
+        Obtenir le coffret Premium — 64,95 $
+      </button>
+      <button class="btn-secondary add-to-cart" onclick="document.querySelector('[data-variant=starter]').click(); document.getElementById('cta-btn').click();">
+        Commencer avec le Starter — 27,95 $
+      </button>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:rgba(255,255,255,0.35);">Livraison mondiale · Retours 30 jours · Paiement sécurisé</p>
+  </section>
+
+  <!-- CONFIANCE -->
+  <div class="trust-row">
+    <div class="trust-item">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Produits de haute qualité
+    </div>
+    <div class="trust-item">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      Livraison internationale
+    </div>
+    <div class="trust-item">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      Satisfait ou remboursé
+    </div>
+    <div class="trust-item">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      Livraison en 4 à 8 jours
+    </div>
+  </div>
+
+  <!-- PIED DE PAGE -->
+  <footer id="contact">
+    <div>
+      <div class="footer-logo">LUMISKY</div>
+      <p class="footer-desc">LumiSky™ apporte la galaxie dans votre chambre, votre voiture et vos coins cosy. Aimé par des milliers de clients dans le monde entier.</p>
+      <div class="payment-icons">
+        <span class="payment-icon">VISA</span>
+        <span class="payment-icon">MC</span>
+        <span class="payment-icon">AMEX</span>
+        <span class="payment-icon">PayPal</span>
+        <span class="payment-icon">Apple Pay</span>
+        <span class="payment-icon">G Pay</span>
+        <span class="payment-icon">Shop Pay</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Menu principal</h4>
+      <a href="#accueil">Accueil</a>
+      <a href="#produit">Boutique</a>
+      <a href="#contact">Contact</a>
+      <a href="#">Suivre ma commande</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liens rapides</h4>
+      <a href="#">Politique de confidentialité</a>
+      <a href="#">Politique de remboursement</a>
+      <a href="#">Politique d'expédition</a>
+      <a href="#">Conditions d'utilisation</a>
+      <a href="#">Informations de contact</a>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    <span>© 2026, LumiSky™. Propulsé par Shopify</span>
+    <span>Conçu avec ❤️ pour nos clients francophones</span>
+  </div>
+
+  <!-- Bouton retour en haut -->
+  <button id="back-top" style="position:fixed;bottom:24px;right:24px;background:#6c63ff;color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:20px;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:99;cursor:pointer;" aria-label="Retour en haut">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
